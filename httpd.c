@@ -34,7 +34,7 @@
 #include <stdlib.h>
 
 #define ISspace(x) isspace((int)(x))
-
+// The isspace() function checks whether a character is a white-space character or not.
 #define SERVER_STRING "Server: jdbhttpd/0.1.0\r\n"
 
 void accept_request(int);
@@ -64,6 +64,7 @@ void accept_request(int client)
  char path[512];
  size_t i, j;
  struct stat st;
+ //Common Gateway Interface
  int cgi = 0;      /* becomes true if server decides this is a CGI
                     * program */
  char *query_string = NULL;
